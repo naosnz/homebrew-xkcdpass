@@ -36,8 +36,8 @@ class PythonXkcdpass < Formula
 
   desc "Password generator inspired by XKCD 936 written in Python"
   homepage "https://github.com/redacted/XKCD-password-generator"
-  url "https://files.pythonhosted.org/packages/ca/70/e34428fca48054f071e00e9252e7e78b37c573fe8f57c0a2c29976f72b75/xkcdpass-1.19.3.tar.gz"
-  sha256 "c5a2e948746da6fe504e8404284f457d8e98da6df5047c6bb3f71b18882e9d2a"
+  url "https://files.pythonhosted.org/packages/1b/46/cc09b4bd9115814f084c188df93d547695be15f0b728a02445ef2366b867/xkcdpass-1.19.4.tar.gz"
+  sha256 "2935d54b482d19bcb54656bda01cbbec9ee41ffd42d235a52705fd95cab70fd7"
   license "BSD-3-Clause"
 
   depends_on "python@3.10"
