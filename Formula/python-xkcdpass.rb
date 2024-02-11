@@ -4,7 +4,7 @@
 # https://github.com/redacted/XKCD-password-generator
 #
 # Written by Ewen McNeill <ewen@naos.co.nz>, 2022-02-09
-# Updated by Ewen McNeill <ewen@naos.co.nz>, 2023-10-06
+# Updated by Ewen McNeill <ewen@naos.co.nz>, 2024-02-12
 #
 #---------------------------------------------------------------------------
 # SPDX-License-Identifier: MIT
@@ -36,11 +36,11 @@ class PythonXkcdpass < Formula
 
   desc "Password generator inspired by XKCD 936 written in Python"
   homepage "https://github.com/redacted/XKCD-password-generator"
-  url "https://files.pythonhosted.org/packages/1b/46/cc09b4bd9115814f084c188df93d547695be15f0b728a02445ef2366b867/xkcdpass-1.19.4.tar.gz"
-  sha256 "2935d54b482d19bcb54656bda01cbbec9ee41ffd42d235a52705fd95cab70fd7"
+  url "https://files.pythonhosted.org/packages/d3/51/0c350b4bd98e532056d57171bdc334a0f5c2bcb5d894ba88b2066ffb2bed/xkcdpass-1.19.8.tar.gz"
+  sha256 "30afff4399b83de362a11b26c4768c6cddb1edae12920572d31931baf9d4b9fa"
   license "BSD-3-Clause"
 
-  depends_on "python@3.10"
+  depends_on "python@3.12"
 
   def install
     virtualenv_install_with_resources
