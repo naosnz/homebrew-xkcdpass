@@ -4,7 +4,7 @@
 # https://github.com/redacted/XKCD-password-generator
 #
 # Written by Ewen McNeill <ewen@naos.co.nz>, 2022-02-09
-# Updated by Ewen McNeill <ewen@naos.co.nz>, 2024-02-12
+# Updated by Ewen McNeill <ewen@naos.co.nz>, 2024-12-17
 #
 #---------------------------------------------------------------------------
 # SPDX-License-Identifier: MIT
@@ -36,8 +36,8 @@ class PythonXkcdpass < Formula
 
   desc "Password generator inspired by XKCD 936 written in Python"
   homepage "https://github.com/redacted/XKCD-password-generator"
-  url "https://files.pythonhosted.org/packages/d3/51/0c350b4bd98e532056d57171bdc334a0f5c2bcb5d894ba88b2066ffb2bed/xkcdpass-1.19.8.tar.gz"
-  sha256 "30afff4399b83de362a11b26c4768c6cddb1edae12920572d31931baf9d4b9fa"
+  url "https://files.pythonhosted.org/packages/31/f8/14f147b1c7407ce70000ccd1819295c5d3c328d8ebed0840bb461ba71655/xkcdpass-1.19.9.tar.gz"
+  sha256 "a94f871bda870668e5c65eb84296e939600362df2cc036b91c5ca3815bd292d7"
   license "BSD-3-Clause"
 
   depends_on "python@3.12"
@@ -49,8 +49,12 @@ class PythonXkcdpass < Formula
   test do
     # `test do` will create, run in and delete a temporary directory.
     #
-    # TODO: Figure out how to run tests
+    # For now we simply test that we can run the program without a shell
+    # error code, and that we get the default expected number of words in
+    # the output
     #
-    system "true"
+    system "#{bin}/xkcdpass"
+    run_output = shell_output("#{bin}/xkcdpass -n 5").strip
+    assert_equal(5, run_output.split(' ').size)
   end
 end
